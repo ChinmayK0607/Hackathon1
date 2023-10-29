@@ -1,4 +1,4 @@
-import image from "../assets/1.jpg";
+import image from "../assets/Landing.png";
 import icon from "../assets/icon.png";
 
 export function Landing() {
