@@ -1,7 +1,7 @@
 import { useState } from "react";
 import upload from "../assets/upload.png";
 
-export function Upload() {
+export function Uploading() {
   const [imagePreview, setImagePreview] = useState(null);
 
   // Function to handle file selection

@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import image from "../assets/Landing.png";
 import icon from "../assets/icon.png";
 
 export function Landing() {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("./Uploading");
+  };
   return (
     <div className="container mx-auto p-10 flex flex-col md:flex-row items-center justify-center">
       <div className="md:w-1/2">
@@ -15,7 +21,10 @@ export function Landing() {
           Advanced Policing and Counterterrorism. Quickly detect and recognize
           faces from CCTV video streams using our powerful web app.
         </p>
-        <button className="bg-[#31F2F2] text-white px-6 py-3 rounded-full hover:bg-[#0E9AA7] transition">
+        <button
+          className="bg-[#31F2F2] text-white px-6 py-3 rounded-full hover:bg-[#0E9AA7] transition"
+          onClick={handleGetStarted}
+        >
           Get Started
         </button>
       </div>
