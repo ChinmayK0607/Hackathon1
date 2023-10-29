@@ -4,11 +4,9 @@ import upload from "../assets/upload.png";
 export function Uploading() {
   const [imagePreview, setImagePreview] = useState(null);
 
-  // Function to handle file selection
   const handleFileChange = (event) => {
     const file = event.target.files[0];
 
-    // Display the selected image
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -40,8 +38,6 @@ export function Uploading() {
               efficiency.
             </li>
           </ul>
-
-          {/* Your file input and image preview */}
           <div className="mt-4">
             <label
               htmlFor="fileInput"
@@ -56,7 +52,6 @@ export function Uploading() {
               onChange={handleFileChange}
             />
 
-            {/* Image preview */}
             {imagePreview && (
               <div className="mt-4">
                 <img
